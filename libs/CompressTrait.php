@@ -14,10 +14,11 @@ namespace Octris\Yuicompressor;
 /**
  * Combine multiple source files into a single file and compress it with yuicompressor.
  *
+ * 
  * @copyright   copyright (c) 2013-2016 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class CompressorTrait
+class CompressTrait
 {
     /**
      * Additional options for yuicompressor.
