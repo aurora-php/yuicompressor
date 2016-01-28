@@ -37,9 +37,6 @@ trait CompressTrait
         $this->options = array_map(function($k, $v) {
             return escapeshellarg('--' . $k . ' ' .$v);
         }, array_keys($options), array_values($options));
-        
-        $composer = new \Composer();
-        var_dump($composer->getConfig()->get('bin-dir'));
     }
 
     /**
