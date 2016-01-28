@@ -46,7 +46,7 @@ trait CompressTrait
                 $this->file_ext = '.' . $v;
             }
             
-            return escapeshellarg('--' . $k . ' ' .$v);
+            return '--' . $k . ' ' . escapeshellarg($v);
         }, array_keys($options), array_values($options));
     }
 
