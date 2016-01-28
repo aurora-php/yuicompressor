@@ -2,7 +2,7 @@
     "name":         "octris/yuicompressor",
     "type":         "library",
     "description":  "YUI compressor integration for octris template engine.",
-    "keywords":     [],
+    "keywords":     [ "octris", "compressor", "javascript", "css", "minification" ],
     "homepage":     "http://github.com/octris/yuicompressor/",
     "license":      "BSD-3-Clause",
 
@@ -13,11 +13,11 @@
     }],
 
     "require":      {
-        "php":          ">=5.6.0",
-        "packagist/yuicompressor-bin": "^2.4",
-        "composer/composer": "^1.0.0"
+        "php":          ">=5.6.0"
     },
-
+    
+    "bin": [ "bin/yuicompressor.jar" ],
+    
     "autoload":     {
         "psr-4":        {
             "Octris\\Yuicompressor\\": "libs/"
