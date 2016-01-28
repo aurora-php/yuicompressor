@@ -18,7 +18,7 @@ namespace Octris\Yuicompressor;
  * @copyright   copyright (c) 2013-2016 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class CompressTrait
+trait CompressTrait
 {
     /**
      * Additional options for yuicompressor.
