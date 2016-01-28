@@ -28,6 +28,13 @@ trait CompressTrait
     protected $options = array();
 
     /**
+     * Extension for output file.
+     *
+     * @type    string
+     */
+    protected $file_ext;
+
+    /**
      * Set YUI compressor options.
      * 
      * @param   array       $options    Options for YUI compressor.
@@ -35,6 +42,10 @@ trait CompressTrait
     public function setOptions(array $options)
     {
         $this->options = array_map(function($k, $v) {
+            if ($k == 'type') {
+                $this->file_ext = '.' . $v;
+            }
+            
             return escapeshellarg('--' . $k . ' ' .$v);
         }, array_keys($options), array_values($options));
     }
@@ -66,7 +77,7 @@ trait CompressTrait
         exec($cmd, $ret, $ret_val);
 
         $md5  = md5_file($tmp);
-        $name = $md5 . '.' . $type;
+        $name = $md5 . $this->file_ext;
         rename($tmp, $this->dst . '/' . $name);
 
         return $name;
