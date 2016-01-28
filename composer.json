@@ -14,7 +14,8 @@
 
     "require":      {
         "php":          ">=5.6.0",
-        "packagist/yuicompressor-bin": "^2.4"
+        "packagist/yuicompressor-bin": "^2.4",
+        "composer/composer": "^1.0.0"
     },
 
     "autoload":     {
