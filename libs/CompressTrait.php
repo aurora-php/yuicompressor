@@ -59,6 +59,7 @@ trait CompressTrait
         $cmd = sprintf(
             'cat %s | java -jar %s/yuicompressor.jar %s -o %s 2>&1',
             implode(' ', $files),
+            __DIR__ . '/../bin',
             implode(' ', $options),
             $tmp
         );
